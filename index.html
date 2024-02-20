@@ -1,0 +1,24 @@
+ <!-- 1. Write a program that prompts the user to enter the number of fruits they want to add to a list. Then, for each fruit, 
+   prompt the user to enter its name. Finally, display the list of fruits entered by the user -->
+
+
+   
+   <body onload="loadFruits()">
+    <button onclick="myFunction()">Add Fruit</button>
+      <p id="fruits"></p>
+    </body>
+    
+    <script>
+        var fruits = ["kiwi", "Apple", "Mongo"];
+    
+    function loadFruits(){
+     document.getElementById("fruits").innerHTML=fruits;
+    }
+    
+    function myFunction() {
+      var newfruit = prompt("What is your favorite fruit?");
+      fruits[fruits.length] = newfruit;
+      document.getElementById("fruits").innerHTML = fruits;
+    }
+    
+    </script>
